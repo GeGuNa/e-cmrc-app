@@ -3,6 +3,8 @@ const Product = require('./pages/Product')
 const Mongo = require("./db/mongo.js")
 const User = require("./db/User.js")
 
+
+
 const app = express()
 const port = 3000
 
@@ -21,6 +23,8 @@ await Mongo()
     
    
 app.use((req,res,next) => {
+
+
 
 	console.log(`done deal`)
 	
