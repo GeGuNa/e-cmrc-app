@@ -4,6 +4,8 @@ const Product = require("../db/Product.js")
 
 app.get('/', async(req, res) => {
 
+
+//inserts the data  
 	/*await Product.create({
 		name:"test1",
 		price:134.4,
@@ -11,11 +13,7 @@ app.get('/', async(req, res) => {
 		description: "ZZZZZZZZZZZZZZZZZ",
 		quantity: 15
 	})*/
-	
-	
 
-	
-	
 	
 	const qz = await Product.findById("69bf4d8a3d9886340d357ce6")
 console.log(qz)
