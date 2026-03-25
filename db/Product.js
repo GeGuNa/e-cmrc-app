@@ -8,11 +8,23 @@ const productSchema = new mongoose.Schema({
   color: String,
   quantity: Number,
   description: String,
-}, { 
-  timestamps: true 
+  rating: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 5
+  },
+  reviews: {
+    type: Number,
+    default: 0
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }  
 });
 
-productSchema.index({ quantity: 1, updatedAt: -1 });
+//productSchema.index({ quantity: 1, updatedAt: -1 });
 
 const Product = mongoose.model('Product', productSchema);
 
